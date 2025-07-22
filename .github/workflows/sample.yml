@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Started
-      run : echo "Hi GitHub"
+      run : echo "Hi GitHub... On push check..."
 
     - name : Multi line code
       run : 
