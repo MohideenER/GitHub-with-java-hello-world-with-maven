@@ -9,10 +9,12 @@
 name: My First Workflow
 
 on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: [ "master" ]
+  [push, pull_request]
+  # push:
+    # branches: ["master"]
+  # pull_request:
+    # branches: [ "master" ]
+    
 
   workflow_dispatch:  
 
