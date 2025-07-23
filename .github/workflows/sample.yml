@@ -32,7 +32,8 @@ jobs:
       run : 
             echo "Git",
             echo "Started"
-     
+    # - name : Installing maven Build
+    #   run : mvn clean install
 
 
       
