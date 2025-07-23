@@ -8,16 +8,14 @@
 
 name: My First Workflow
 
-on: [push, pull_request, workflow_dispatch]
+on: 
   
-  # push:
-    # branches: ["master"]
-  # pull_request:
-    # branches: [ "master" ]
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: [ "master" , "LoginModule" ]
+  workflow_dispatch:
     
-
-    
-
 jobs:
   build:
 
