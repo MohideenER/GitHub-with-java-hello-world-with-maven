@@ -30,9 +30,8 @@ jobs:
       run : echo "Hi GitHub... On push check..."
 
     - name : Multi line code
-      run : 
-            mvn clean install
-            echo "Git"
+      run : mvn clean install,
+            echo "Git",
             echo "Started"
      
 
