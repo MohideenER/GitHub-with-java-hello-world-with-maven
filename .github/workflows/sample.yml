@@ -31,7 +31,8 @@ jobs:
 
     - name : Multi line code
       run : 
-            echo "Git",
+            mvn clean install
+            echo "Git"
             echo "Started"
      
 
