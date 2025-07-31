@@ -14,7 +14,7 @@ on:
     branches: ["master", patch-1]
   pull_request:
     branches: [ "master"]
-    types: [opened]
+    
   workflow_dispatch:
     
 jobs:
