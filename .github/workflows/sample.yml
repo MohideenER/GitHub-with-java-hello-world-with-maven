@@ -6,15 +6,15 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: My First Workflow
+name: My First Workflow in the Patch-2 branch
 
 on: 
   
-  # push:
-  #   branches: ["master", patch-1]
-  pull_request:
-    branches: [ "master"]
-    types: ['opened','synchronize']
+  push:
+    branches: ["master", "patch-2"]
+  # pull_request:
+  #   branches: [ "master"]
+  #   types: ['opened',"synchronize"]
     
   workflow_dispatch:
     
