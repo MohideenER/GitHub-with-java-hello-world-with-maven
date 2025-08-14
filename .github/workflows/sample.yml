@@ -10,11 +10,11 @@ name: My First Workflow
 
 on: 
   
-  push:
-    branches: ["master", "patch-2"]
-  # pull_request:
-  #   branches: [ "master"]
-  #   types: ['opened',"synchronize"]
+  # push:
+  #   branches: ["master", "patch-2"]
+  pull_request:
+    branches: [ "master"]
+    types: ["opened","synchronize"]
     
   # workflow_dispatch:
     
