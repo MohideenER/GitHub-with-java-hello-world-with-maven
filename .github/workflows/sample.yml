@@ -14,7 +14,7 @@ on:
   #   branches: ["master", patch-1]
   pull_request:
     branches: [ "master"]
-    types: ["closed"]
+    types: ["closed", "opened", "synchronize"]
   # schedule:
   #   - cron: '50 12 * * *'
   workflow_dispatch:
