@@ -16,7 +16,7 @@ on:
   #   branches: [ "master"]
   #   types: ["closed"]
   schedule:
-    - cron: '45 10 * * *'
+    - cron: '59 11 * * *'
   workflow_dispatch:
     
 jobs:
@@ -32,7 +32,7 @@ jobs:
 
     - name : Multi line code
       run : 
-            echo "Git",
+            echo "Git"
             echo "Started"
      
 
