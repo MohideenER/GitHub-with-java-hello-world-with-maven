@@ -2,6 +2,6 @@ package hello;
 
 public class Greeter {
     public String sayHello() {
-        return "Welcome to Github Demo.... Checking the PR opened with Patch-2";
+        return "Welcome to Github Demo.... Checking puch check... in patch 2";
     }
 }
