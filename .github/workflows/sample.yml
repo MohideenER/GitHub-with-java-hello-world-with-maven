@@ -11,8 +11,8 @@ name: My First Workflow
 on: 
 # [push, pull_request, workflow_dispatch]
   
-  push:
-    branches: ["master", patch-1]
+  # push:
+  #   branches: ["master", patch-1]
   pull_request:
     types: [opened]
       
