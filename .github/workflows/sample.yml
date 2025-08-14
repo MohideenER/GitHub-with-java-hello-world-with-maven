@@ -16,7 +16,7 @@ on:
   #   branches: [ "master"]
   #   types: ["closed"]
   schedule:
-    - cron: '15 14 * * *'
+    - cron: '22 14 * * *'
   workflow_dispatch:
     
 jobs:
