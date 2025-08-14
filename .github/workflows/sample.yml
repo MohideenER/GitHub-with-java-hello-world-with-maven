@@ -14,8 +14,8 @@ on:
   # push:
   #   branches: ["master", patch-1]
   pull_request:
-    # branches: ["master"]
-    types: [opened, synchronize]
+    branches: ["master"]
+    types: ["opened", "synchronize"]
       
 
   # schedule:
