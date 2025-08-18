@@ -1,1 +1,5 @@
-
+name : Variables workflow
+on:
+  workflow_dispatch
+jobs :
+  
