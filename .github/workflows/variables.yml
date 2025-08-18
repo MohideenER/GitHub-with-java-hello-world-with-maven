@@ -3,7 +3,7 @@ name : Variables workflow
 on:
   workflow_dispatch:
 jobs :
-  build:
+ 
     runs-on: ubuntu-latest
     # env:
     #   name : Mohid
