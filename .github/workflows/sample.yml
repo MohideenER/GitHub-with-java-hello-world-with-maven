@@ -10,8 +10,8 @@ name: My First Workflow
 
 on: 
   
-  push:
-    branches: ["master", patch2]
+  # push:
+  #   branches: ["master", patch2]
   pull_request:
     branches: [ "master"]
     types: ["closed"]
