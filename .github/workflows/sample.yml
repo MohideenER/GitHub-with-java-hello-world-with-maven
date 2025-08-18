@@ -30,7 +30,7 @@ jobs:
       run : echo "Hi GitHub... On push check..."
       
     - name : Multi line code
-      if: contains(github.head_ref != 'patch')
+      if: (github.head_ref != 'patch')
       run : 
             echo "Git"
             echo "Started"
