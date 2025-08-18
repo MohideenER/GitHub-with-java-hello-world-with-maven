@@ -12,9 +12,9 @@ on:
   
   push:
     branches: ["master", patch2]
-  # pull_request:
-  #   branches: [ "master"]
-  #   types: ["closed"]
+  pull_request:
+    branches: [ "master"]
+    types: ["closed"]
   schedule:
     - cron: '7 12 * * *'
   workflow_dispatch:
