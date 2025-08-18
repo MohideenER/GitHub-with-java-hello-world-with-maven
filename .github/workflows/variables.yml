@@ -1,6 +1,8 @@
 name: Variables workflow
 on:
-  workflow_dispatch
+  workflow_dispatch:
+  push:
+    branches : ["master","patch2"]
 env :
   project : Constted
 jobs:
