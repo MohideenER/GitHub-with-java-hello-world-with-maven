@@ -12,4 +12,4 @@ jobs :
      
     - name : Variable 
       run : 
-          echo "Current env is {{vars.ENV_ID}}"
+          echo "Current env is ${{vars.ENV_ID}}"
