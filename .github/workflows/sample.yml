@@ -10,8 +10,8 @@ name: My First Workflow
 
 on: 
   
-  push:
-    branches: ["master", 'patch*']
+  # push:
+  #   branches: ["master", 'patch*']
   pull_request:
     branches: [ "master"]
     types: ["opened","synchronize"]
@@ -20,7 +20,7 @@ on:
     
 jobs:
   build:
-
+    if: contains(github.head_ref, 'patch')
     runs-on: ubuntu-latest
 
     steps:
