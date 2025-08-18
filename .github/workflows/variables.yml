@@ -1,7 +1,7 @@
 name: Variables workflow
 on:
-  push:
-    branches : [master, "patch2"]
+  # push:
+  #   branches : [master, "patch2"]
   workflow_dispatch: {}
 
 jobs:
