@@ -2,11 +2,10 @@ name : Variables workflow
 on:
   workflow_dispatch
 jobs :
-    build:
-      runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
     # env:
     #   name : Mohid
-
     steps:
     
     - uses: actions/checkout@v4
