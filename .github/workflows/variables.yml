@@ -2,4 +2,17 @@ name : Variables workflow
 on:
   workflow_dispatch
 jobs :
-  
+    build:
+      runs-on: ubuntu-latest
+    # env:
+    #   name : Mohid
+
+    steps:
+    
+    - uses: actions/checkout@v4
+     
+    - name : Variable 
+      run : 
+            echo "Git"
+            echo "Started"
+            # echo "Current env is {{vars.PROJECT_ID}}"
