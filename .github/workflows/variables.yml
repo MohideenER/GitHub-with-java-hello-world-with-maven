@@ -9,8 +9,8 @@ jobs :
     #   name : Mohid
     steps:
     
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
      
-    - name : Variable 
-      run : 
+      - name : Variable 
+        run : 
           echo "Current env is ${{vars.ENV_ID}}"
