@@ -20,7 +20,7 @@ on:
     
 jobs:
   build:
-    
+    # if: contains(github.head_ref,'patch')
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
       run : echo "Hi GitHub... On push check..."
       
     - name : Multi line code
-      if: (github.head_ref != 'patch2')
+      # if: (github.head_ref != 'patch2')
       run : 
             echo "Git"
             echo "Started"
