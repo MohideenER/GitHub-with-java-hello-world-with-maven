@@ -1,16 +1,18 @@
-name : Variables workflow
+name: Variables workflow
 
 on:
   workflow_dispatch:
-jobs :
-    Variable_demo:
-     runs-on: ubuntu-latest
+
+jobs:
+  Variable_demo:
+    runs-on: ubuntu-latest
+
+    # Optional local environment variable
     # env:
-    #   name : Mohid
-     steps:
-    
-        - uses: actions/checkout@v4
-     
-        - name : Variable 
-          run : 
-            echo "Current env is ${{vars.ENV_ID}}"
+    #   name: Mohid
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Variable
+        run: echo "Current env is ${{ vars.ENV_ID }}"
