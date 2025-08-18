@@ -13,6 +13,4 @@ jobs :
      
     - name : Variable 
       run : 
-            echo "Git"
-            echo "Started"
-            # echo "Current env is {{vars.PROJECT_ID}}"
+          echo "Current env is {{vars.ENV_ID}}"
