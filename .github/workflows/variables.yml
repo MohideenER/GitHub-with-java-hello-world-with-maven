@@ -3,7 +3,8 @@ on:
   # push:
   #   branches : [master, "patch2"]
   workflow_dispatch: {}
-
+env :
+  project : Constted
 jobs:
   Variable_demo:
     runs-on: ubuntu-latest
@@ -12,4 +13,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Show Variable
-        run: echo "Current env is ${{ vars.ENV_ID }}"
+        run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
