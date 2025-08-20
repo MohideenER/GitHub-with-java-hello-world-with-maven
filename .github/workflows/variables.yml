@@ -1,9 +1,10 @@
 name: Variables workflow
 on:
+  workflow_dispatch:
+  # push:
+  #   branches : ["master","patch2"]
   
-  push:
-    branches : ["master","patch2"]
-  workflow_dispatch:  
+# Workflow variable 
 env :
   project : Constted
 jobs:
@@ -12,6 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Show Variable
-        run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
+# Configuration variable
+      # - name: Show Variable
+      #   run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
+# Context variable
