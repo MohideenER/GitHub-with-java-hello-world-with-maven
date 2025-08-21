@@ -19,6 +19,6 @@ jobs:
 # Context variable
       - name: Context variables
         run: 
-          echo "repository name is ${{github.repository}}"
-          echo "repository name is ${{github.worflow}}"
-          echo"repository name is ${{github.triggering_actor}}"
+          echo " Repository name - ${{github.repository}}"
+          echo "Workflow name - ${{github.worflow}}"
+          echo " triggerssed_by - ${{github.triggering_actor}}"
