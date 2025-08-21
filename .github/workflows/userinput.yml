@@ -1,0 +1,39 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: User inputs workflow
+on:
+  workflow_dispatch:
+    inputs:
+      user_input_1:
+        description: "Enter the first value"
+        required: true
+        default: "0"
+      user_input_2:
+        description: "Enter the second value"
+        required: true
+        default: "0"
+
+
+jobs:
+   addinguserinput:
+     build:
+
+      runs-on: ubuntu-latest
+
+        steps:
+          
+          - uses: actions/checkout@v4
+          - name: Addd.....
+            id: sum
+            run: |
+              res=$(( ${{ inputs.user_input_1 }} + ${{ inputs.user_input_2 }} ))
+              echo "res=$res" >> $GITHUB_OUTPUT
+    
+          - name: Display the result
+            run: echo "The sum is ${{ steps.sum.outputs.res }}"
