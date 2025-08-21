@@ -7,6 +7,7 @@
 # documentation.
 
 name: User inputs workflow
+
 on:
   workflow_dispatch:
     inputs:
@@ -19,21 +20,18 @@ on:
         required: true
         default: "0"
 
-
 jobs:
-   addinguserinput:
-     build:
+  addinguserinput:
+    runs-on: ubuntu-latest
 
-      runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-        steps:
-          
-          - uses: actions/checkout@v4
-          - name: Addd.....
-            id: sum
-            run: |
-              res=$(( ${{ inputs.user_input_1 }} + ${{ inputs.user_input_2 }} ))
-              echo "res=$res" >> $GITHUB_OUTPUT
-    
-          - name: Display the result
-            run: echo "The sum is ${{ steps.sum.outputs.res }}"
+      - name: Add the two user inputs
+        id: sum
+        run: |
+          res=$(( ${{ inputs.user_input_1 }} + ${{ inputs.user_input_2 }} ))
+          echo "res=$res" >> $GITHUB_OUTPUT
+
+      - name: Display the result
+        run: echo "The sum is ${{ steps.sum.outputs.res }}"
