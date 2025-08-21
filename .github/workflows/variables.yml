@@ -1,8 +1,8 @@
 name: Variables workflow
 on:
   workflow_dispatch:
-  # push:
-  #   branches : ["master","patch2"]
+  push:
+    branches : ["master","patch2"]
   
 # Workflow variable 
 env :
@@ -17,3 +17,8 @@ jobs:
       # - name: Show Variable
       #   run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
 # Context variable
+      - name: Context variables
+        run: 
+          echo "repository name is ${{github.repository}}"
+          echo "repository name is ${{github.worflow}}"
+          echo"repository name is ${{github.triggering_actor}}"
