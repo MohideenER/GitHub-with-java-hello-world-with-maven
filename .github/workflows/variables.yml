@@ -17,8 +17,8 @@ jobs:
       - name: Show Variable
         run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
 # Context variable
-      # - name: Context variables
-      #   run: 
-      #     echo " Repository name - ${{github.repository}}"
-      #     echo "Workflow name - ${{github.workflow}}"
-      #     echo " triggerssed_by - ${{github.triggering_actor}}"
+      - name: Context variables
+        run: 
+          echo " Repository name - ${{github.repository}}"
+          echo "Workflow name - ${{github.workflow}}"
+          echo " triggerssed_by - ${{github.triggering_actor}}"
