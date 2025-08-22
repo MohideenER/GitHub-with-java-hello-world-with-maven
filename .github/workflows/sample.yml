@@ -8,32 +8,43 @@
 
 name: My First Workflow
 
+
 on: 
   
   # push:
-  #   branches: ["master", patch-1]
-  # pull_request:
-  #   branches: [ "master"]
-  #   types: ["closed"]
-  schedule:
-    - cron: '7 12 * * *'
+  #   branches: ["master", 'patch*']
+  pull_request:
+    branches: [ "master"]
+    types: ["opened","synchronize"]
+
   workflow_dispatch:
+# env:
+#   sessionss : demo
     
 jobs:
+  
   build:
-
+  
+    # if: contains(github.head_ref,'patch')
     runs-on: ubuntu-latest
+    # env:
+    #   name : Mohid
 
     steps:
+    
     - uses: actions/checkout@v4
     
     - name: Started
       run : echo "Hi GitHub... On push check..."
-
+      
     - name : Multi line code
+      # env:
+      #   onn : Weekly call
+      # if: (github.head_ref != 'patch2')
       run : 
             echo "Git"
             echo "Started"
+            # echo "$name is giving $sessionss on $onn"
      
 
 
