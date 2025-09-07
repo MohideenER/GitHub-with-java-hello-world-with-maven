@@ -17,7 +17,7 @@ jobs:
       - name: Show Variable
         run: |
             echo "$project - Current runing env is ${{ vars.ENV_ID }}"
-            echo "Secret is ${{secret.CHECK_KEY}}"
+            echo "Secret is ${{secrets.CHECK_KEY}}"
 # Context variable
       - name: Context variables
         run: |
