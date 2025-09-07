@@ -15,10 +15,12 @@ jobs:
       - uses: actions/checkout@v4
 # Configuration variable
       - name: Show Variable
-        run: echo "$project - Current runing env is ${{ vars.ENV_ID }}"
+        run: |
+            echo "$project - Current runing env is ${{ vars.ENV_ID }}"
+            echo "Secret is ${{secret.CHECK_KEY}}"
 # Context variable
       - name: Context variables
-        run: 
+        run: |
           echo " Repository name - ${{github.repository}}"
           echo "Workflow name - ${{github.workflow}}"
           echo " triggerssed_by - ${{github.triggering_actor}}"
