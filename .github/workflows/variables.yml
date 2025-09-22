@@ -1,4 +1,4 @@
-_name: Variables workflow
+name: Variables workflow
 on:
   workflow_dispatch:
   push:
