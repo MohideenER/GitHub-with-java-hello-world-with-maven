@@ -1,8 +1,8 @@
 name: Variables workflow
 on:
   workflow_dispatch:
-  push:
-    branches : ["master","patch*"]
+  # push:
+    # branches : ["master","patch*"]
   
 # Workflow variable 
 env :
