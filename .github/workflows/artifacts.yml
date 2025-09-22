@@ -10,7 +10,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: artifact1
-          path: output.txt
+          path: newfolder/output.txt
   artifact_download:
     needs: artifact_upload
     runs-on: ubuntu-latest
@@ -18,5 +18,5 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: artifact1
-          # path: artifact1
-      - run: cat artifact1/output.txt
+          path: newfolder/output.txt
+      - run: cat newfolder/output.txt
