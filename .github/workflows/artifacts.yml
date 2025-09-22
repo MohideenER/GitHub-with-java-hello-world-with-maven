@@ -17,5 +17,6 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
+          name: example-artifact
           path: example-artifact
       - run: cat example-artifact/output.txt
