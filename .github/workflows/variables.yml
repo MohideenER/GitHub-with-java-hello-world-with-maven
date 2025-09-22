@@ -23,4 +23,4 @@ jobs:
         run: |
           echo " Repository name - ${{github.repository}}"
           echo "Workflow name - ${{github.workflow}}"
-          echo " triggerssed_by - ${{github.triggering_actor}}"
+          echo " triggerssed_by - ${{github.triggering_actor}}" 
