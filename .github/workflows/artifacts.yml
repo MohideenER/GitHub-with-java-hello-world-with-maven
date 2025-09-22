@@ -1,1 +1,21 @@
+name: Artifact demo
 
+on: [push]
+
+jobs:
+  artifact_upload:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World" > output.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: example-artifact
+          path: output.txt
+  artifact_download:
+    needs: artifact_upload
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: example-artifact
+      - run: cat example-artifact/output.txt
