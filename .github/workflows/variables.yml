@@ -1,4 +1,4 @@
-name: Variables workflow
+_name: Variables workflow
 on:
   workflow_dispatch:
   push:
@@ -17,7 +17,7 @@ jobs:
       - name: Show Variable
         run: |
             echo "$project - Current runing env is ${{ vars.ENV_ID }}"
-            echo "Secret is ${{secrets.KEY}}"
+            echo "Secret is ${{secrets.E_KEY}}"
 # Context variable
       - name: Context variables
         run: |
