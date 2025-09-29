@@ -5,7 +5,7 @@ on:
     branches: [patch2]
 
 jobs:
-  call-reusable:
-    uses: ./.github/workflows/reusableworkflow.yml
-    secrets:
-      REPO_KEY: ${{ secrets.REPO_KEY }}
+  call-workflow:
+    uses: MohideenER/GitHub-with-java-hello-world-with-maven/.github/workflows/reusableworkflow.yml@main
+    with:
+      name: "Repo B Trigger"
