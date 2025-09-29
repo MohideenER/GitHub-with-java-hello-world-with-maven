@@ -9,3 +9,5 @@ jobs:
     uses: MohideenER/GitHub-with-java-hello-world-with-maven/.github/workflows/reusableworkflow.yml@patch2
     with:
       name: "Repo B Trigger"
+    secrets:
+      REPO_KEY: ${{ secrets.REPO_KEY }}
