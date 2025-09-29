@@ -1,8 +1,17 @@
-name: REusable workflow
+name: Reusable Workflow
 
-on : workflow_dispatch
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        type: string
+
 jobs:
-  call-reusable:
-    uses: org-name/repo-name/.github/workflows/reusable.yml@main
-    secrets:
-      REPO_KEY: ${{ secrets.REPO_KEY }}
+  use-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print input and secret
+        run: |
+          echo "Hello, ${{ inputs.name }}!"
+          echo "Using secret: ${{ secrets.REPO_KEY }}"
