@@ -1,0 +1,11 @@
+name: Caller Workflow
+
+on:
+  push:
+    branches: [patch2]
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusableworkflow.yml
+    secrets:
+      REPO_KEY: ${{ secrets.REPO_KEY }}
