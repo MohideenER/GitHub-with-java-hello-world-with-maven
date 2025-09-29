@@ -10,4 +10,4 @@ jobs:
     with:
       name: "Repo B Trigger"
     secrets:
-      REPO_KEY: ${{ secrets.REPO_KEY }}
+      REPO_KEY: ${{ secrets.E_KEY }}
