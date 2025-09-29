@@ -1,0 +1,8 @@
+name: REusable workflow
+
+on : workflow_dispatch
+jobs:
+  call-reusable:
+    uses: org-name/repo-name/.github/workflows/reusable.yml@main
+    secrets:
+      REPO_KEY: ${{ secrets.REPO_KEY }}
