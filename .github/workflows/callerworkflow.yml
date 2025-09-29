@@ -4,6 +4,7 @@ on:
   push:
     branches: [patch2]
 
+
 jobs:
   call-workflow:
     uses: MohideenER/GitHub-with-java-hello-world-with-maven/.github/workflows/reusableworkflow.yml@patch2
