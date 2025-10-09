@@ -23,13 +23,13 @@ jobs:
       - name: Simulate setup
         run: echo "Setting up version ${{ matrix.version }} on ${{ matrix.os }}"
 
-  #     - name: Cache simulated dependencies
+  #     - name: Cache simulation
   #       uses: actions/cache@v3
   #       with:
   #         path: my_cache/
-  #         key: cache-${{ runner.os }}-v${{ matrix.version }}
+  #         key: ${{ runner.os }}-v${{ matrix.version }}
   #         restore-keys: |
-  #           cache-${{ runner.os }}-
+  #           ${{ runner.os }}-
 
   #     - name: Run tests
   #       run: echo "Running tests for version ${{ matrix.version }} on ${{ matrix.os }}"
@@ -42,19 +42,8 @@ jobs:
   #     - name: Checkout code
   #       uses: actions/checkout@v3
 
-  #     - name: Simulate build
+  #     - name: Build
   #       run: echo "Building the application..."
-
-  #     - name: Create artifact
-  #       run: |
-  #         mkdir -p output
-  #         echo "Build complete" > output/result.txt
-
-  #     - name: Upload artifact
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: build-result
-  #         path: output/
 
   # deploy-staging:
   #   name: Deploy to Staging
@@ -64,13 +53,8 @@ jobs:
   #   environment:
   #     name: staging
   #   steps:
-  #     - name: Download build artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: build-result
-
   #     - name: Deploy
-  #       run: echo "Deploying to STAGING"
+  #       run: echo "Deploying to STAGING environment..."
 
   # deploy-production:
   #   name: Deploy to Production
@@ -80,10 +64,5 @@ jobs:
   #   environment:
   #     name: production
   #   steps:
-  #     - name: Download build artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: build-result
-
   #     - name: Deploy
-  #       run: echo "Deploying to PRODUCTION"
+  #       run: echo "Deploying to PRODUCTION environment..."
