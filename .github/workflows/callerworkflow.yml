@@ -8,7 +8,8 @@ on:
 jobs:
   call-workflow:
     # uses: MohideenER/GitHub-with-java-hello-world-with-maven/.github/workflows/reusableworkflow.yml@patch2
-    uses: MohideenER/GitHub-with-java-hello-world-with-maven/.github/workflows/reusablewf-diff-repo.yml@main
+    uses: MohideenER/orangehrm-ci-report-demo/.github/workflows/reusablewf-diff-repo.yml@main
+   
     with:
       name: "Repo B Trigger"
     secrets:
